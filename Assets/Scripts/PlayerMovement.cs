@@ -65,15 +65,9 @@ public class PlayerMovement : MonoBehaviour
         // put the score screen here
         if (deaths >= 3)
         {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
             Debug.Log("you died, put death screen here");
-            
-              
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             SceneManager.LoadScene("GameOver");
-
-            
         }
 
         
