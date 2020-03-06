@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 4600952800771940502}
   - component: {fileID: 4600952800771940503}
   - component: {fileID: 4600952800771940500}
+  - component: {fileID: 6291903703937412992}
   m_Layer: 5
-  m_Name: Die Button
+  m_Name: Quit Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,9 +116,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4600952800771940503}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6291903703937412992}
+        m_MethodName: doExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &6291903703937412992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4600952800771940490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c1e99750801bc645b41a9cd02fbfc64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4600952801135422653
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,7 +299,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: DIE
+  m_Text: QUIT
 --- !u!1 &4600952801733236078
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,7 +501,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4600952801861362283}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42bd783c53be497439ad19133ab20458, type: 3}
   m_Name: 
@@ -501,7 +525,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4600952801898237302
 RectTransform:
   m_ObjectHideFlags: 0
@@ -668,6 +692,7 @@ GameObject:
   - component: {fileID: 4600952802375535863}
   - component: {fileID: 4600952802375535860}
   - component: {fileID: 4600952802375535861}
+  - component: {fileID: 4675499497730659573}
   m_Layer: 5
   m_Name: Start Button
   m_TagString: Untagged
@@ -772,8 +797,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4444919561233707939}
-        m_MethodName: PauseButton
+      - m_Target: {fileID: 4675499497730659573}
+        m_MethodName: startGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -785,6 +810,18 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &4675499497730659573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4600952802375535851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fc4d9732856325428953085e86bd886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4600952802490351594
 GameObject:
   m_ObjectHideFlags: 0
