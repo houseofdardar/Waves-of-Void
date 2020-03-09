@@ -19,5 +19,6 @@ public class gameStart : MonoBehaviour
     public void startGame()
     {
         SceneManager.LoadScene("MainGame");
+        Time.timeScale = 1;
     }
 }

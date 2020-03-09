@@ -40,26 +40,25 @@ public class PlayerToObjectStick : MonoBehaviour
         {
             Debug.Log("b");
             other.gameObject.transform.parent = null;
-           
+            cc.Move(rb.velocity * Time.deltaTime);
         }
     }
-    private void FixedUpdate()
-    {
-        currentPos = Vector3.Lerp(startPoint.position, endPoint.position, Mathf.Cos
-            (Time.time / travleTime * Mathf.PI * 2) * .5f + .5f);
-        rb.MovePosition(currentPos);
-    }
+    /* private void FixedUpdate()
+     {
+             currentPos = Vector3.Lerp(startPoint.position, endPoint.position, Mathf.Cos(Time.time / travleTime * Mathf.PI * 2) * -.05f + .5f);
+         rb.MovePosition(currentPos);
+     } */
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
-        {
+        
             cc = other.GetComponent<CharacterController>();
-        }
+        
     }
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")
             cc.Move(rb.velocity * Time.deltaTime);
     }
-
+    
 }
