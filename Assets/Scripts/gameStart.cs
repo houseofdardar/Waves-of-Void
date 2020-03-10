@@ -8,7 +8,8 @@ public class gameStart : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       // myObject.GetComponent<MyScript>().MyFunction();
+
     }
 
     // Update is called once per frame
