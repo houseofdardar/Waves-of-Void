@@ -40,7 +40,9 @@ public class PlayerToObjectStick : MonoBehaviour
         {
             Debug.Log("b");
             other.gameObject.transform.parent = null;
-            cc.Move(rb.velocity * Time.deltaTime);
+            cc.Move(rb.velocity /** 60*/ * Time.deltaTime);
+            //cc.attachedRigidbody.AddForce(new Vector3(90, 0, 0));
+            //cc.velocity = new Vector3(cc.velocity + rb.velocity);
         }
     }
     /* private void FixedUpdate()
